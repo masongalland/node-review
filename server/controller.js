@@ -31,5 +31,14 @@ module.exports = {
     users.push(req.body);
     id++
     res.status(200).send(users)
+  },
+  getUserById: (req, res) => {
+    let index = users.findIndex(e => e.id === +req.params.id)
+    res.status(200).send(users[index])
+  },
+  deleteUserById: (req, res) => {
+    let index = users.findIndex(e => e.id === +req.params.id)
+    users.splice(index, 1);
+    res.status(200).send(users)    
   }
 };

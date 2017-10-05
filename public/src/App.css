@@ -2,7 +2,11 @@ h2 {
   margin-bottom: 10px;
 }
 input {
-  margin: 20px 0;
+  margin: 30px 10px;
+  border-radius: 4px;
+}
+.top-select {
+  margin-top: 20px
 }
 
 .App {

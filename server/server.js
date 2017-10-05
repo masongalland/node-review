@@ -10,14 +10,11 @@ app.use( express.static( __dirname + '/../public/build' ) );
 // === ENDPOINTS =========================
 
 app.get("/api/users", controller.getUsersByQuery);
+app.get("/api/users/:id", controller.getUserById);
 
 app.post("/api/users", controller.postNewUser);
 
-
-
-
-
-
+app.delete("/api/users/:id", controller.deleteUserById);
 
 // =======================================
 
