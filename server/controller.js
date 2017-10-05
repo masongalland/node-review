@@ -24,5 +24,9 @@ module.exports = {
     else {
       res.status(200).json("Invalid query");
     }
+  },
+  postNewUser: (req, res) => {
+    
   }
+
 };
