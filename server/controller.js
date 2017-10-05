@@ -1,4 +1,5 @@
 const users = require("./users.json");
+let id = 51;
 
 module.exports = {
   getUsersByQuery: (req, res) => {
@@ -26,7 +27,9 @@ module.exports = {
     }
   },
   postNewUser: (req, res) => {
-    
+    req.body.id = id;
+    users.push(req.body);
+    id++
+    res.status(200).send(users)
   }
-
 };

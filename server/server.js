@@ -11,6 +11,8 @@ app.use( express.static( __dirname + '/../public/build' ) );
 
 app.get("/api/users", controller.getUsersByQuery);
 
+app.post("/api/users", controller.postNewUser);
+
 
 
 
