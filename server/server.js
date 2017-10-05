@@ -1,23 +1,15 @@
-const express = require('express')
-    , bodyParser = require('body-parser')
-    , controller = require('./controller');
+// === VARIABLES/REQUIRED EXTERNAL THINGS =========================
 
-const app = express();
-app.use(bodyParser.json());
-app.use( express.static( __dirname + '/../public/build' ) );
+
+
+// === MIDDLEWARE =========================
+
 
 
 // === ENDPOINTS =========================
 
-app.get("/api/users", controller.getUsersByQuery);
 
 
+// === LISTEN =========================
 
 
-
-
-
-// =======================================
-
-const port = 3001;
-app.listen(port, () => console.log('Listening on port: ', port));
