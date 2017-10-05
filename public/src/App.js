@@ -30,11 +30,8 @@ class App extends Component {
   }
 
   handleSearch(category, term) {
-    getUsers(category, term).then(response => {
-      this.setState({
-        users: response
-      });
-    });
+    //http request
+    //set users on state to the response
   }
 
   render() {
